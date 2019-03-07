@@ -1,0 +1,30 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.io.PrintWriter;
+
+public class Filesreader {
+
+
+    public static void main(String[] args) throws FileNotFoundException {
+File plik = new File("D:\\Users\\Programowanie\\IdeaProjects\\Files reader\\src\\test.txt");
+Scanner in = new Scanner(plik);
+
+String zdanie = in.nextLine();
+        System.out.println("First file line: ");
+
+System.out.println(zdanie);
+
+
+Scanner input1   = new Scanner(System.in);
+
+        System.out.println("Write text which will be wrote to file");
+
+String zmienna =input1.nextLine();
+
+        PrintWriter zapis = new PrintWriter("D:\\Users\\Programowanie\\IdeaProjects\\Files reader\\src\\test.txt");
+                zapis.println(zmienna);
+        zapis.close();
+
+        System.out.println("Operation done.");
+    }}
